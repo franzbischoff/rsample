@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">rsample</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.1.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,15 +29,15 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/Applications/Intervals.html">Bootstrap confidence intervals</a>
     <a class="dropdown-item" href="../articles/Applications/Recipes_and_rsample.html">Recipes with rsample</a>
-    <a class="dropdown-item" href="../articles/Applications/Survival_Analysis.html">Survival analysis and resampling</a>
     <a class="dropdown-item" href="../articles/Working_with_rsets.html">Working with resampling sets</a>
   </div>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-learn-more">Learn more</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-learn-more">
-    <a class="external-link dropdown-item" href="https://www.tidymodels.org/learn/models/time-series/">Time series analysis</a>
+    <a class="external-link dropdown-item" href="https://spatialsample.tidymodels.org/">Spatial resampling</a>
     <a class="external-link dropdown-item" href="https://www.tidymodels.org/learn/work/nested-resampling/">Nested resampling</a>
+    <a class="external-link dropdown-item" href="https://www.tidymodels.org/learn/models/time-series/">Time series analysis</a>
   </div>
 </li>
 <li class="active nav-item">
@@ -65,10 +65,22 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="rsample-development-version">rsample (development version)<a class="anchor" aria-label="anchor" href="#rsample-development-version"></a></h2>
-<ul><li><p>Fixed how <code><a href="../reference/nested_cv.html">nested_cv()</a></code> handles call objects so variables in the environment can be used when specifying resampling schemes (<a href="https://github.com/tidymodels/rsample/issues/81" class="external-link">#81</a>).</p></li>
-<li><p>Updated to testthat 3e (<a href="https://github.com/tidymodels/rsample/issues/328" class="external-link">#328</a>).</p></li>
-<li><p>Finally removed the <code><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather()</a></code> method for <code>rset</code> objects. Use <code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html" class="external-link">tidyr::pivot_longer()</a></code> instead (<a href="https://github.com/tidymodels/rsample/issues/328" class="external-link">#328</a>).</p></li>
+<ul><li><p>Added arguments to control how <code><a href="../reference/group_vfold_cv.html">group_vfold_cv()</a></code> combines groups. Use <code>balance = "groups"</code> to assign (roughly) the same number of groups to each fold, or <code>balance = "observations"</code> to assign (roughly) the same number of observations to each fold.</p></li>
+<li><p>Added a <code>repeats</code> argument to <code><a href="../reference/group_vfold_cv.html">group_vfold_cv()</a></code> (<a href="https://github.com/tidymodels/rsample/issues/330" class="external-link">#330</a>).</p></li>
+<li><p>Added new functions for grouped resampling: <code><a href="../reference/group_mc_cv.html">group_mc_cv()</a></code> (<a href="https://github.com/tidymodels/rsample/issues/313" class="external-link">#313</a>), <code><a href="../reference/initial_split.html">group_initial_split()</a></code> and <code><a href="../reference/validation_split.html">group_validation_split()</a></code> (<a href="https://github.com/tidymodels/rsample/issues/315" class="external-link">#315</a>), and <code><a href="../reference/group_bootstraps.html">group_bootstraps()</a></code> (<a href="https://github.com/tidymodels/rsample/issues/316" class="external-link">#316</a>).</p></li>
+<li><p>Added a new function, <code><a href="../reference/reverse_splits.html">reverse_splits()</a></code>, to swap analysis and assessment splits (<a href="https://github.com/tidymodels/rsample/issues/319" class="external-link">#319</a>, <a href="https://github.com/tidymodels/rsample/issues/284" class="external-link">#284</a>).</p></li>
+<li><p>Improved the error thrown when calling <code><a href="../reference/as.data.frame.rsplit.html">assessment()</a></code> on a <code>perm_split</code> object created by <code><a href="../reference/permutations.html">permutations()</a></code> (<a href="https://github.com/tidymodels/rsample/issues/321" class="external-link">#321</a>, <a href="https://github.com/tidymodels/rsample/issues/322" class="external-link">#322</a>).</p></li>
 </ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.0.0" id="rsample-100">rsample 1.0.0<a class="anchor" aria-label="anchor" href="#rsample-100"></a></h2><p class="text-muted">CRAN release: 2022-06-24</p>
+<ul><li><p>Fixed how <code><a href="../reference/nested_cv.html">nested_cv()</a></code> handles call objects so variables in the environment can be used when specifying resampling schemes (<a href="https://github.com/tidymodels/rsample/issues/81" class="external-link">#81</a>).</p></li>
+<li><p>Updated to testthat 3e (<a href="https://github.com/tidymodels/rsample/issues/280" class="external-link">#280</a>) and added better checking for <code><a href="../reference/vfold_cv.html">vfold_cv()</a></code> (<a href="https://github.com/tidymodels/rsample/issues/293" class="external-link">#293</a>).</p></li>
+<li><p>Finally removed the <code><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather()</a></code> method for <code>rset</code> objects. Use <code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html" class="external-link">tidyr::pivot_longer()</a></code> instead (<a href="https://github.com/tidymodels/rsample/issues/280" class="external-link">#280</a>).</p></li>
+<li><p>Changed <code><a href="../reference/initial_split.html">initial_split()</a></code> to avoid calling tidyselect twice on <code>strata</code> (<a href="https://github.com/tidymodels/rsample/issues/296" class="external-link">#296</a>). This fix stops <code><a href="../reference/initial_split.html">initial_split()</a></code> from generating messages like:</p></li>
+</ul><pre><code>  Note: Using an external vector in selections is ambiguous.
+  i Use `all_of(strata)` instead of `strata` to silence this message.
+  i See &lt;https://tidyselect.r-lib.org/reference/faq-external-vector.html&gt;.</code></pre>
+<ul><li>Added better printing methods for initial split objects.</li></ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.1" id="rsample-011">rsample 0.1.1<a class="anchor" aria-label="anchor" href="#rsample-011"></a></h2><p class="text-muted">CRAN release: 2021-11-08</p>
 <ul><li><p>Updated documentation on stratified sampling (<a href="https://github.com/tidymodels/rsample/issues/245" class="external-link">#245</a>).</p></li>
@@ -93,7 +105,7 @@
 <li><p>Added <code><a href="../reference/permutations.html">permutations()</a></code>, a function for creating permutation resamples by performing column-wise shuffling (<a href="https://github.com/mattwarkentin" class="external-link">@mattwarkentin</a>, <a href="https://github.com/tidymodels/rsample/issues/198" class="external-link">#198</a>).</p></li>
 <li><p>Fixed an issue where empty assessment sets couldn’t be created by <code><a href="../reference/make_splits.html">make_splits()</a></code> (<a href="https://github.com/tidymodels/rsample/issues/188" class="external-link">#188</a>).</p></li>
 <li><p><code>rset</code> objects now contain a “fingerprint” attribute that can be used to check to see if the same object uses the same resamples.</p></li>
-<li><p>The <code><a href="../reference/reg_intervals.html">reg_intervals()</a></code> function is a convenience function for <code><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm()</a></code>, <code><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm()</a></code>, <code><a href="https://rdrr.io/pkg/survival/man/survreg.html" class="external-link">survreg()</a></code>, and <code><a href="https://rdrr.io/pkg/survival/man/coxph.html" class="external-link">coxph()</a></code> models (<a href="https://github.com/tidymodels/rsample/issues/206" class="external-link">#206</a>).</p></li>
+<li><p>The <code><a href="../reference/reg_intervals.html">reg_intervals()</a></code> function is a convenience function for <code><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm()</a></code>, <code><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm()</a></code>, <code>survreg()</code>, and <code>coxph()</code> models (<a href="https://github.com/tidymodels/rsample/issues/206" class="external-link">#206</a>).</p></li>
 <li><p>A few internal functions were exported so that <code>rsample</code>-adjacent packages can use the same underlying code.</p></li>
 <li><p>The <code><a href="https://pillar.r-lib.org/reference/type_sum.html" class="external-link">obj_sum()</a></code> method for <code>rsplit</code> objects was updated (<a href="https://github.com/tidymodels/rsample/issues/215" class="external-link">#215</a>).</p></li>
 <li><p>Changed the inheritance structure for <code>rsplit</code> objects from specific to general and simplified the methods for the <code><a href="../reference/complement.html">complement()</a></code> generic (<a href="https://github.com/tidymodels/rsample/issues/216" class="external-link">#216</a>).</p></li>
@@ -144,8 +156,7 @@
 <code>rsample</code> 0.0.3<a class="anchor" aria-label="anchor" href="#rsample-003"></a></h2><p class="text-muted">CRAN release: 2018-11-20</p>
 <div class="section level3">
 <h3 id="new-features-0-0-3">New features<a class="anchor" aria-label="anchor" href="#new-features-0-0-3"></a></h3>
-<ul><li>Added function <code><a href="../reference/initial_split.html">initial_time_split()</a></code> for ordered initial sampling appropriate for time series data.</li>
-</ul></div>
+<ul><li>Added function <code><a href="../reference/initial_split.html">initial_time_split()</a></code> for ordered initial sampling appropriate for time series data.</li></ul></div>
 <div class="section level3">
 <h3 id="minor-improvements-and-fixes-0-0-3">Minor improvements and fixes<a class="anchor" aria-label="anchor" href="#minor-improvements-and-fixes-0-0-3"></a></h3>
 <ul><li><p><code><a href="https://tidyr.tidyverse.org/reference/fill.html" class="external-link">fill()</a></code> has been renamed <code><a href="../reference/populate.html">populate()</a></code> to avoid a conflict with <code><a href="https://tidyr.tidyverse.org/reference/fill.html" class="external-link">tidyr::fill()</a></code>.</p></li>
@@ -185,7 +196,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
   </div></footer></body></html>

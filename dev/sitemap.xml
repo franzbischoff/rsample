@@ -19,9 +19,6 @@
     <loc>https://rsample.tidymodels.org/dev/articles/Applications/Recipes_and_rsample.html</loc>
   </url>
   <url>
-    <loc>https://rsample.tidymodels.org/dev/articles/Applications/Survival_Analysis.html</loc>
-  </url>
-  <url>
     <loc>https://rsample.tidymodels.org/dev/articles/Working_with_rsets.html</loc>
   </url>
   <url>
@@ -61,6 +58,12 @@
     <loc>https://rsample.tidymodels.org/dev/reference/get_fingerprint.html</loc>
   </url>
   <url>
+    <loc>https://rsample.tidymodels.org/dev/reference/group_bootstraps.html</loc>
+  </url>
+  <url>
+    <loc>https://rsample.tidymodels.org/dev/reference/group_mc_cv.html</loc>
+  </url>
+  <url>
     <loc>https://rsample.tidymodels.org/dev/reference/group_vfold_cv.html</loc>
   </url>
   <url>
@@ -80,6 +83,9 @@
   </url>
   <url>
     <loc>https://rsample.tidymodels.org/dev/reference/loo_cv.html</loc>
+  </url>
+  <url>
+    <loc>https://rsample.tidymodels.org/dev/reference/make_groups.html</loc>
   </url>
   <url>
     <loc>https://rsample.tidymodels.org/dev/reference/make_splits.html</loc>
@@ -106,13 +112,13 @@
     <loc>https://rsample.tidymodels.org/dev/reference/populate.html</loc>
   </url>
   <url>
-    <loc>https://rsample.tidymodels.org/dev/reference/pretty.vfold_cv.html</loc>
-  </url>
-  <url>
     <loc>https://rsample.tidymodels.org/dev/reference/reexports.html</loc>
   </url>
   <url>
     <loc>https://rsample.tidymodels.org/dev/reference/reg_intervals.html</loc>
+  </url>
+  <url>
+    <loc>https://rsample.tidymodels.org/dev/reference/reverse_splits.html</loc>
   </url>
   <url>
     <loc>https://rsample.tidymodels.org/dev/reference/rolling_origin.html</loc>

@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">rsample</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.1.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,15 +29,15 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/Applications/Intervals.html">Bootstrap confidence intervals</a>
     <a class="dropdown-item" href="../articles/Applications/Recipes_and_rsample.html">Recipes with rsample</a>
-    <a class="dropdown-item" href="../articles/Applications/Survival_Analysis.html">Survival analysis and resampling</a>
     <a class="dropdown-item" href="../articles/Working_with_rsets.html">Working with resampling sets</a>
   </div>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-learn-more">Learn more</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-learn-more">
-    <a class="external-link dropdown-item" href="https://www.tidymodels.org/learn/models/time-series/">Time series analysis</a>
+    <a class="external-link dropdown-item" href="https://spatialsample.tidymodels.org/">Spatial resampling</a>
     <a class="external-link dropdown-item" href="https://www.tidymodels.org/learn/work/nested-resampling/">Nested resampling</a>
+    <a class="external-link dropdown-item" href="https://www.tidymodels.org/learn/models/time-series/">Time series analysis</a>
   </div>
 </li>
 <li class="nav-item">
@@ -75,7 +75,7 @@
 
       <dl><dt>
           
-          <code><a href="initial_split.html">initial_split()</a></code> <code><a href="initial_split.html">initial_time_split()</a></code> <code><a href="initial_split.html">training()</a></code> <code><a href="initial_split.html">testing()</a></code> 
+          <code><a href="initial_split.html">initial_split()</a></code> <code><a href="initial_split.html">initial_time_split()</a></code> <code><a href="initial_split.html">training()</a></code> <code><a href="initial_split.html">testing()</a></code> <code><a href="initial_split.html">group_initial_split()</a></code> 
         </dt>
         <dd>Simple Training/Test Set Splitting</dd>
       </dl><dl><dt>
@@ -100,9 +100,19 @@
         <dd>Monte Carlo Cross-Validation</dd>
       </dl><dl><dt>
           
-          <code><a href="validation_split.html">validation_split()</a></code> <code><a href="validation_split.html">validation_time_split()</a></code> 
+          <code><a href="validation_split.html">validation_split()</a></code> <code><a href="validation_split.html">validation_time_split()</a></code> <code><a href="validation_split.html">group_validation_split()</a></code> 
         </dt>
         <dd>Create a Validation Set</dd>
+      </dl><dl><dt>
+          
+          <code><a href="group_bootstraps.html">group_bootstraps()</a></code> 
+        </dt>
+        <dd>Group Bootstraps</dd>
+      </dl><dl><dt>
+          
+          <code><a href="group_mc_cv.html">group_mc_cv()</a></code> 
+        </dt>
+        <dd>Group Monte Carlo Cross-Validation</dd>
       </dl><dl><dt>
           
           <code><a href="group_vfold_cv.html">group_vfold_cv()</a></code> 
@@ -222,6 +232,11 @@
         <dd>Add Assessment Indices</dd>
       </dl><dl><dt>
           
+          <code><a href="reverse_splits.html">reverse_splits()</a></code> 
+        </dt>
+        <dd>Reverse the analysis and assessment sets</dd>
+      </dl><dl><dt>
+          
           <code><a href="rsample2caret.html">rsample2caret()</a></code> <code><a href="rsample2caret.html">caret2rsample()</a></code> 
         </dt>
         <dd>Convert Resampling Objects to Other Formats</dd>
@@ -263,7 +278,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
   </div></footer></body></html>
