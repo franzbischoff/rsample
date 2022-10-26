@@ -66,7 +66,8 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="rsample-development-version">rsample (development version)<a class="anchor" aria-label="anchor" href="#rsample-development-version"></a></h2>
-<ul><li><p><code><a href="../reference/group_bootstraps.html">group_bootstraps()</a></code> now warns if resampling returns any empty assessment sets (previously had been an error) (<a href="https://github.com/tidymodels/rsample/issues/356" class="external-link">#356</a>) (<a href="https://github.com/tidymodels/rsample/issues/357" class="external-link">#357</a>).</p></li>
+<ul><li><p>All grouped resampling functions (<code><a href="../reference/group_vfold_cv.html">group_vfold_cv()</a></code>, <code><a href="../reference/group_mc_cv.html">group_mc_cv()</a></code>, <code><a href="../reference/initial_split.html">group_initial_split()</a></code> and <code><a href="../reference/validation_split.html">group_validation_split()</a></code>, and <code><a href="../reference/group_bootstraps.html">group_bootstraps()</a></code>) now support stratification. Strata must be constant within each group (<a href="https://github.com/tidymodels/rsample/issues/317" class="external-link">#317</a>, <a href="https://github.com/tidymodels/rsample/issues/360" class="external-link">#360</a>, <a href="https://github.com/tidymodels/rsample/issues/363" class="external-link">#363</a>, <a href="https://github.com/tidymodels/rsample/issues/364" class="external-link">#364</a>, <a href="https://github.com/tidymodels/rsample/issues/365" class="external-link">#365</a>).</p></li>
+<li><p><code><a href="../reference/group_bootstraps.html">group_bootstraps()</a></code> now warns if resampling returns any empty assessment sets (previously had been an error) (<a href="https://github.com/tidymodels/rsample/issues/356" class="external-link">#356</a>) (<a href="https://github.com/tidymodels/rsample/issues/357" class="external-link">#357</a>).</p></li>
 <li><p><code><a href="../reference/bootstraps.html">bootstraps()</a></code> now warns if resampling returns any empty assessment sets (previously had no message or warning) (<a href="https://github.com/tidymodels/rsample/issues/356" class="external-link">#356</a>) (<a href="https://github.com/tidymodels/rsample/issues/357" class="external-link">#357</a>).</p></li>
 <li><p>Added a new function, <code><a href="../reference/clustering_cv.html">clustering_cv()</a></code>, for blocked cross-validation in various predictor spaces. This is a very flexible function, taking arguments to both <code>distance_function</code> and <code>cluster_function</code>, allowing it to be used for spatial clustering as well as potentially phylogenetic and other forms of clustering (<a href="https://github.com/tidymodels/rsample/issues/351" class="external-link">#351</a>).</p></li>
 </ul></div>
@@ -93,7 +94,8 @@
 </ul><pre><code>  Note: Using an external vector in selections is ambiguous.
   i Use `all_of(strata)` instead of `strata` to silence this message.
   i See &lt;https://tidyselect.r-lib.org/reference/faq-external-vector.html&gt;.</code></pre>
-<ul><li>Added better printing methods for initial split objects.</li></ul></div>
+<ul><li>Added better printing methods for initial split objects.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.1" id="rsample-011">rsample 0.1.1<a class="anchor" aria-label="anchor" href="#rsample-011"></a></h2><p class="text-muted">CRAN release: 2021-11-08</p>
 <ul><li><p>Updated documentation on stratified sampling (<a href="https://github.com/tidymodels/rsample/issues/245" class="external-link">#245</a>).</p></li>
@@ -169,7 +171,8 @@
 <code>rsample</code> 0.0.3<a class="anchor" aria-label="anchor" href="#rsample-003"></a></h2><p class="text-muted">CRAN release: 2018-11-20</p>
 <div class="section level3">
 <h3 id="new-features-0-0-3">New features<a class="anchor" aria-label="anchor" href="#new-features-0-0-3"></a></h3>
-<ul><li>Added function <code><a href="../reference/initial_split.html">initial_time_split()</a></code> for ordered initial sampling appropriate for time series data.</li></ul></div>
+<ul><li>Added function <code><a href="../reference/initial_split.html">initial_time_split()</a></code> for ordered initial sampling appropriate for time series data.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="minor-improvements-and-fixes-0-0-3">Minor improvements and fixes<a class="anchor" aria-label="anchor" href="#minor-improvements-and-fixes-0-0-3"></a></h3>
 <ul><li><p><code><a href="https://tidyr.tidyverse.org/reference/fill.html" class="external-link">fill()</a></code> has been renamed <code><a href="../reference/populate.html">populate()</a></code> to avoid a conflict with <code><a href="https://tidyr.tidyverse.org/reference/fill.html" class="external-link">tidyr::fill()</a></code>.</p></li>
